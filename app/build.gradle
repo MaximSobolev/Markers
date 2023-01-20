@@ -1,0 +1,91 @@
+plugins {
+    id 'com.android.application'
+    id 'org.jetbrains.kotlin.kapt'
+    id 'org.jetbrains.kotlin.android'
+}
+
+android {
+    namespace 'ru.netology.markers'
+    compileSdk 33
+
+    buildFeatures.viewBinding = true
+
+    defaultConfig {
+        applicationId "ru.netology.markers"
+        minSdk 21
+        targetSdk 33
+        versionCode 1
+        versionName "1.0"
+
+        def properties = new Properties()
+        def file = rootProject.file("maps.properties")
+        if (file.exists()) {
+            properties.load(file.newDataInputStream())
+        }
+        manifestPlaceholders.mapsApiKey = properties.getProperty("MAPS_API_KEY", "")
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+}
+
+dependencies {
+    def lifecycle_version = "2.5.1"
+    def arch_version = "2.1.0"
+    def fragment_version = "1.5.5"
+    def nav_version = "2.5.3"
+    def map_version = "4.2.2-lite"
+    def recycler_version = "1.2.1"
+    def room_version = "2.5.0"
+    def coroutine_version = "1.6.4"
+
+
+    implementation 'androidx.core:core-ktx:1.9.0'
+    implementation 'androidx.appcompat:appcompat:1.6.0'
+    implementation 'com.google.android.material:material:1.7.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.5'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+
+    // ViewModel
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycle_version"
+    // LiveData
+    implementation "androidx.lifecycle:lifecycle-livedata-ktx:$lifecycle_version"
+    // optional - Test helpers for LiveData
+    testImplementation "androidx.arch.core:core-testing:$arch_version"
+    // RecyclerView
+    implementation "androidx.recyclerview:recyclerview:$recycler_version"
+    // Fragment
+    implementation "androidx.fragment:fragment-ktx:$fragment_version"
+    //Navigation
+    implementation "androidx.navigation:navigation-fragment-ktx:$nav_version"
+    implementation "androidx.navigation:navigation-ui-ktx:$nav_version"
+    //MapKit Yandex
+    implementation "com.yandex.android:maps.mobile:$map_version"
+    //MD3
+    implementation "androidx.compose.material3:material3:1.0.1"
+    implementation "androidx.compose.material3:material3-window-size-class:1.0.1"
+    //Room
+    implementation "androidx.room:room-runtime:$room_version"
+    kapt "androidx.room:room-compiler:$room_version"
+    kapt "androidx.room:room-runtime:$room_version"
+    implementation "androidx.room:room-ktx:$room_version"
+    implementation "androidx.room:room-paging:$room_version"
+    //Coroutine
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:$coroutine_version"
+}

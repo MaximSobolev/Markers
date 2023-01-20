@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">Markers</string>
+    <string name="welcome_markers"><b>Welcome to the Markers</b></string>
+    <string name="choose_action">Choose the required action</string>
+    <string name="markers_on_map">View markers on the map</string>
+    <string name="markers_as_list">View markers as a list</string>
+    <string name="marker">Marker</string>
+    <string name="edit">Edit</string>
+    <string name="delete">Delete</string>
+    <string name="show_on_the_map">Show on the map</string>
+    <string name="no_access">No access to maps</string>
+    <string name="place_name">Name of the place</string>
+    <string name="description_of_place">Description of the place</string>
+    <string name="dialog_text">Write the name and description of the place</string>
+    <string name="save">Save</string>
+    <string name="empty_fields">Fields cannot be empty</string>
+    <string name="change">Change</string>
+    <string name="edit_dialog_text">Change the name or description of the place</string>
+    <string name="back">back</string>
+</resources>

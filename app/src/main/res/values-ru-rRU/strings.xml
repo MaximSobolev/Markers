@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Маркеры</string>
+    <string name="welcome_markers">Приветсвтуем в приложении Маркеры</string>
+    <string name="choose_action">Выберите действие</string>
+    <string name="markers_on_map">Просмотр маркеров на карте</string>
+    <string name="markers_as_list">Просмотр маркеров списком</string>
+    <string name="marker">Маркер</string>
+    <string name="edit">Редактировать</string>
+    <string name="delete">Удалить</string>
+    <string name="show_on_the_map">Показать на карте</string>
+    <string name="no_access">Отсутсвует доступ к картам</string>
+    <string name="place_name">Название места</string>
+    <string name="description_of_place">Описание места</string>
+    <string name="dialog_text">Введите название и описание места</string>
+    <string name="save">Сохранить</string>
+    <string name="empty_fields">Поля не могут быть пустыми</string>
+    <string name="change">Изменить</string>
+    <string name="edit_dialog_text">Измените название или описание места</string>
+    <string name="back">Назад</string>
+</resources>

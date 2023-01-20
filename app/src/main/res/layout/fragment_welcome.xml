@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context=".fragments.WelcomeFragment">
+
+    <TextView
+        android:id="@+id/welcomeText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="@dimen/second_dp"
+        android:text="@string/welcome_markers"
+        android:textSize="@dimen/twenty_five_sp" />
+
+    <TextView
+        android:id="@+id/chooseActionText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/second_dp"
+        android:text="@string/choose_action"
+        android:textSize="@dimen/twenty_sp" />
+
+    <Button
+        android:id="@+id/mapsButton"
+        style="@style/Widget.Material3.Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/first_dp"
+        android:text="@string/markers_on_map"
+        android:textSize="@dimen/fifteen_sp" />
+
+    <Button
+        android:id="@+id/listButton"
+        style="@style/Widget.Material3.Button.OutlinedButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/markers_as_list"
+        android:textSize="@dimen/fifteen_sp"
+        app:strokeColor="@color/design_default_color_primary" />
+
+</LinearLayout>
