@@ -12,11 +12,10 @@ data class MarkerEntity (
     val y : Float,
     val name : String,
     val description : String,
-    val showMarker : Boolean = false
         ) {
-    fun toDto() = Marker(id, x, y, name, description, showMarker)
+    fun toDto() = Marker(id, x, y, name, description)
     companion object {
         fun fromDto(marker: Marker) = MarkerEntity(marker.id, marker.x, marker.y,
-            marker.name, marker.description, marker.showMarker)
+            marker.name, marker.description)
     }
 }

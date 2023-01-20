@@ -50,10 +50,4 @@ class MarkerViewModel(application: Application) : AndroidViewModel(application) 
         }
     }
 
-    fun showOnMap(id: Long) {
-        viewModelScope.launch {
-            repository.show(id)
-        }
-    }
-
 }

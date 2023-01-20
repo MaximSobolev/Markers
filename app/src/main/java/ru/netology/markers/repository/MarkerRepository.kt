@@ -8,5 +8,4 @@ interface MarkerRepository {
     suspend fun delete(id : Long)
     suspend fun edit(id : Long, name: String, description : String)
     suspend fun save(marker: Marker)
-    suspend fun show(id: Long)
 }

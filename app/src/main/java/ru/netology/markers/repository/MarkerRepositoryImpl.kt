@@ -23,10 +23,4 @@ class MarkerRepositoryImpl(private val markerDao: MarkerDao) : MarkerRepository 
     override suspend fun save(marker: Marker) {
         markerDao.insert(MarkerEntity.fromDto(marker))
     }
-
-    override suspend fun show(id: Long) {
-        markerDao.show(id)
-    }
-
-
 }

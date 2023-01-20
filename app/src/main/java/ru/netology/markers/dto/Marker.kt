@@ -6,5 +6,4 @@ data class Marker (
     val y : Float,
     val name : String,
     val description : String,
-    val showMarker : Boolean = false
         )

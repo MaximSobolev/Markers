@@ -20,7 +20,4 @@ interface MarkerDao {
 
     @Query("DELETE FROM MarkerEntity WHERE id = :id")
     suspend fun delete(id: Long)
-
-    @Query("UPDATE MarkerEntity SET showMarker = 1 WHERE id = :id")
-    suspend fun show(id: Long)
 }
